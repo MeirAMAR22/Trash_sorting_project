@@ -1,0 +1,12 @@
+beautifulsoup4==4.11.2
+matplotlib==3.7.1
+numpy==1.24.2
+Pillow==9.4.0
+PyYAML==6.0
+selenium==4.8.2
+skimage==0.0
+streamlit==1.20.0
+tensorflow==2.11.0
+torchvision==0.14.1
+ultralytics==8.0.53
+webdriver_manager==3.8.4
