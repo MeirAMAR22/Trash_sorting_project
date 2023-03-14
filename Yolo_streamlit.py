@@ -33,8 +33,8 @@ with modelVal:
 
     if mod_val == 'Original':
         # before augmentations (original)
-        # confusion_matrix1_path = '/Users/ofir/pythonProject/ITC_Final_Project/yolov8n_EcoVision_Full/val2_conf_0.4_best/confusion_matrix.png'
-        confusion_matrix1_path = '/yolov8n_EcoVision_Full/val2_conf_0.4_best/confusion_matrix.png'
+        # confusion_matrix1_path = 'yolov8n_EcoVision_Full/val2_conf_0.4_best/confusion_matrix.png'
+        confusion_matrix1_path = 'yolov8n_EcoVision_full/val2_conf_0.4_best/confusion_matrix.png'
         confusion_matrix1 = cv2.imread(confusion_matrix1_path)
         confusion_matrix1 = cv2.cvtColor(confusion_matrix1, cv2.COLOR_BGR2RGB)
         st.subheader('Original dataset')
@@ -43,7 +43,7 @@ with modelVal:
 
     # after augmentations
     if mod_val == 'Augmented':
-        confusion_matrix2_path = '/Users/ofir/pythonProject/ITC_Final_Project/yolov8n_EcoVision_with_augmentations/runs/detect/yolov8n_EcoVision_fuller3 - best/confusion_matrix.png'
+        confusion_matrix2_path = 'yolov8n_EcoVision_with_augmentations/runs/detect/yolov8n_EcoVision_fuller3 - best/confusion_matrix.png'
         confusion_matrix2 = cv2.imread(confusion_matrix2_path)
         confusion_matrix2 = cv2.cvtColor(confusion_matrix2, cv2.COLOR_BGR2RGB)
         st.subheader('Augmented dataset')
@@ -61,7 +61,7 @@ with model:
 
     # image to predict
 
-    images_to_predict_list = glob.glob("/Users/ofir/pythonProject/ITC_Final_Project/images_to_predict/*")
+    images_to_predict_list = glob.glob("images_to_predict/*")
     # print(images_to_predict_list[0])
     st.header('YOLOv8n')
     img_mod, colors_mod1, colors_mod2 = st.columns(3, gap="large")
@@ -89,7 +89,7 @@ with model:
 
     if mod_ == 'Original':
         # import model
-        model1_path = "/Users/ofir/pythonProject/ITC_Final_Project/yolov8n_EcoVision_full/runs/detect/train/weights/best.pt"
+        model1_path = "yolov8n_EcoVision_full/runs/detect/train/weights/best.pt"
         model1 = YOLO(model1_path)
         # # predict
         results = model1.predict(source=img1, conf=confidence)
@@ -116,7 +116,7 @@ with model:
 
     if mod_ == 'Augmented':
         # import model
-        model2_path = "/Users/ofir/pythonProject/ITC_Final_Project/yolov8n_EcoVision_with_augmentations/runs/detect/train/weights/best.pt"
+        model2_path = "yolov8n_EcoVision_with_augmentations/runs/detect/train/weights/best.pt"
         model2 = YOLO(model2_path)
         # predict
         results2 = model2.predict(source=img1, conf=confidence)
