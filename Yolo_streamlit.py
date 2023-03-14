@@ -34,7 +34,7 @@ with modelVal:
     if mod_val == 'Original':
         # before augmentations (original)
         # confusion_matrix1_path = 'yolov8n_EcoVision_Full/val2_conf_0.4_best/confusion_matrix.png'
-        confusion_matrix1_path = '/yolov8n_EcoVision_Full/val2_conf_0.4_best/confusion_matrix.png'
+        confusion_matrix1_path = 'yolov8n_EcoVision_full/val2_conf_0.4_best/confusion_matrix.png'
         confusion_matrix1 = cv2.imread(confusion_matrix1_path)
         confusion_matrix1 = cv2.cvtColor(confusion_matrix1, cv2.COLOR_BGR2RGB)
         st.subheader('Original dataset')
