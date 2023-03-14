@@ -1,0 +1,3 @@
+RUN
+streamlit run C:\Users\Meir\OneDrive\ITC2\COURSES\FLASK\final_projectff\streamlitemodel.py
+The weights need to be downloaded.
