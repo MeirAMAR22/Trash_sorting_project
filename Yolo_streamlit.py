@@ -43,7 +43,7 @@ with modelVal:
 
     # after augmentations
     if mod_val == 'Augmented':
-        confusion_matrix2_path = 'yolov8n_EcoVision_full/val2_conf_0.4_best/confusion_matrix.png'
+        confusion_matrix2_path = 'yolov8n_EcoVision_with_augmentations/runs/detect/yolov8n_EcoVision_fuller3 - best/confusion_matrix.png'
         confusion_matrix2 = cv2.imread(confusion_matrix2_path)
         confusion_matrix2 = cv2.cvtColor(confusion_matrix2, cv2.COLOR_BGR2RGB)
         st.subheader('Augmented dataset')
